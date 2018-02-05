@@ -7,11 +7,11 @@ Brew tap repository used at Catalpa. See https://docs.brew.sh/Taps.html
 1. Install Homebrew
 See https://docs.brew.sh/Installation.html
 
-2. Add this tap
-`brew tap catalpainternational/catalpa`
+2. Add this tap: `brew tap catalpainternational/catalpa`
 
-3. Pin this tap, so that it's prioritised over homebrew-core
-`brew tap-pin catalpainternational/catalpa`
+3. Pin this tap, so that it's prioritised over homebrew-core: `brew tap-pin catalpainternational/catalpa`
+
+4. Now brew will favor formulae inside of this repository over the ones in homebrew-core
 
 
 ### Adding a formulae
