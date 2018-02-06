@@ -26,3 +26,8 @@ For that:
 5. Commit that copied formulae. Please use the commit message `lanuteen as in core/<commit_id>`.
 
 Now all users that have tapped this repository, and pinned the tap (see above), will install version 3.1 when running `brew install lanuteen`
+
+### Caveats
+
+* If you want to use bottles that exist on the homebrew bintray, you should specify that explicitly in the `bottles` part of the formulae. See commit c4c518d60feed15d48ddd82205b18e807040a05a. Otherwise brew will try to find bottles at https://homebrew.bintray.com/bottles-catalpa/, which doesn't exist.
+* If a formula inside this tap depends on another formula inside this tap, the `depends_on` should explicitly mention this tap. For example in the postgis formula, we have `depends_on "catalpainternational/catalpa/postgresql"`
