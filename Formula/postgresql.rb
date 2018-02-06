@@ -7,6 +7,7 @@ class Postgresql < Formula
   head "https://github.com/postgres/postgres.git"
 
   bottle do
+    root_url "https://homebrew.bintray.com/bottles"
     sha256 "339a45ac04bb079550bbca620a6a7d759e27bfa5203e7bb7f2c9f64b7c2edd59" => :sierra
     sha256 "59fcad611ef8b50e8ac9194a6f1971b8acb3d0f0ed3a47b9af601caa88d89bdd" => :el_capitan
     sha256 "44556ea4cb27b61cb931c796c8d5e48298a2b1bedd9830f308bf1e8b8c1cdb23" => :yosemite
@@ -23,7 +24,6 @@ class Postgresql < Formula
 
   depends_on "openssl"
   depends_on "readline"
-  depends_on "libxml2" if MacOS.version <= :leopard # Leopard libxml is too old
 
   option "with-python", "Enable PL/Python2"
   depends_on :python => :optional
@@ -40,7 +40,6 @@ class Postgresql < Formula
   end
 
   def install
-    ENV.libxml2 if MacOS.version >= :snow_leopard
     # avoid adding the SDK library directory to the linker search path
     ENV["XML2_CONFIG"] = "xml2-config --exec-prefix=/usr"
 

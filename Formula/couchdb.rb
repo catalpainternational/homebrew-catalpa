@@ -14,6 +14,7 @@ class Couchdb < Formula
   end
 
   bottle do
+    root_url "https://homebrew.bintray.com/bottles"
     cellar :any
     sha256 "c6e1cf910229b7a7c086a7568df70aacb981035054a4f17f8d74de44ad77479b" => :sierra
     sha256 "fc0ffa183ac7f56ecceea9a4a3103ae896738a8e2c73f5a561c111607a50fc4f" => :el_capitan

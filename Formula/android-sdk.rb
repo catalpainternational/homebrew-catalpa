@@ -9,6 +9,7 @@ class AndroidSdk < Formula
   revision 1
 
   bottle do
+    root_url "https://homebrew.bintray.com/bottles"
     cellar :any
     rebuild 1
     sha256 "57701fa0dbd0c394208c04f2cab20f2638ec0c6a05853730e4e86c6b5874cd19" => :sierra
