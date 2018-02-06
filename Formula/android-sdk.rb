@@ -21,7 +21,7 @@ class AndroidSdk < Formula
   depends_on :java
   depends_on :macos => :mountain_lion
 
-  conflicts_with "android-platform-tools",
+  conflicts_with "caskroom/cask/android-platform-tools",
     :because => "The Android Platform-Tools need to be installed as part of the SDK."
 
   resource "completion" do
