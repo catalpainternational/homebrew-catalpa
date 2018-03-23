@@ -33,5 +33,18 @@ Now all users that have tapped this repository, and pinned the tap (see above), 
 ### Caveats
 
 * If you want to use bottles that exist on the homebrew bintray, you should set the `root_url` in for the `bottles` part of your formula. See commit c4c518d60feed15d48ddd82205b18e807040a05a. Otherwise brew will try to find bottles at https://homebrew.bintray.com/bottles-catalpa/, which doesn't exist.
+
 * Bottle URLs are constructed as `"#{root_url}/#{name}-#{version}.#{tag}.bottle.#{revision}.tar.gz"`. For example `https://homebrew.bintray.com/bottles/postgresql@9.5-9.5.12.sierra.bottle.tar.gz`
+
 * If a formula inside this tap depends on another formula inside this tap, the `depends_on` should explicitly mention this tap. For example in the postgis formula, we have `depends_on "catalpainternational/catalpa/postgresql"`
+
+* For our postgresql formula, we use the bottles that Homebrew core uses for postgresql@9.5. They were downloaded from the homebrew bintray, then uploaded to our own using:
+
+  ```bash
+  # download from the postgres@9.5 bottles
+  wget https://homebrew.bintray.com/bottles/postgresql@9.5-9.5.12.el_capitan.bottle.tar.gz
+  mv postgresql@9.5-9.5.12.el_capitan.bottle.tar.gz postgresql-9.5.12.el_capitan.bottle.tar.gz
+  # upload to bintray
+  curl -T postgresql-9.5.12.el_capitan.bottle.tar.gz 'https://username:api_key@api.bintray.com/content/raphaelmerx/homebrew-catalpa/postgresql/9.5.12/postgresql-9.5.12.el_capitan.bottle.tar.gz?publish=1&override=1'
+
+  ```

@@ -5,8 +5,7 @@ class Postgresql < Formula
   sha256 "02e86f5c66467731bbec18fde96e0daf38c13c9141d8e7d41be663ab6fa6f698"
 
   bottle do
-    root_url "https://homebrew.bintray.com/bottles"
-    name "postgresql@9.5"
+    root_url "https://dl.bintray.com/raphaelmerx/homebrew-catalpa"
     sha256 "1ed23f0045effafaf07e70fd2b6be4e208442b3e7d5e1ccd41c5fe646a7ca015" => :high_sierra
     sha256 "ad1e29a3e881ee32d80f97160dbf02f7d622bd810fc0884042fdd90eff5d58a7" => :sierra
     sha256 "bf4406afae1d3ab106f16290122fce0c32ed237da44bf07da60b482b7840027d" => :el_capitan
@@ -107,11 +106,10 @@ class Postgresql < Formula
       https://www.postgresql.org/docs/9.5/static/pgupgrade.html
 
       You will need your previous PostgreSQL installation from brew to perform `pg_upgrade`.
-      Do not run `brew cleanup postgresql@9.5` until you have performed the migration.
     EOS
   end
 
-  plist_options :manual => "pg_ctl -D #{HOMEBREW_PREFIX}/var/postgresql@9.5 start"
+  plist_options :manual => "pg_ctl -D #{HOMEBREW_PREFIX}/var/postgresql start"
 
   def plist; <<~EOS
     <?xml version="1.0" encoding="UTF-8"?>
