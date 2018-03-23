@@ -1,4 +1,7 @@
+[![Build Status](https://travis-ci.org/raphaelmerx/hamutuk_setup_testing.svg?branch=master)](https://travis-ci.org/raphaelmerx/hamutuk_setup_testing)
+
 # homebrew-catalpa
+
 Brew tap repository used at Catalpa. See https://docs.brew.sh/Taps.html
 
 
