@@ -1,5 +1,5 @@
 os: osx
-osx_image: xcode9.1
+osx_image: xcode9.3beta
 script:
   - brew uninstall postgis
   - brew uninstall postgresql
@@ -7,6 +7,6 @@ script:
   - brew tap-pin catalpainternational/catalpa
   - brew install postgresql --build-bottle
   - brew bottle postgresql
-  - ls -l ./postgresql-9.5.12.sierra.bottle.1.tar.gz
-  - mv postgresql-9.5.12.sierra.bottle.1.tar.gz postgresql-9.5.12.sierra.bottle.tar.gz
-  - curl -T postgresql-9.5.12.sierra.bottle.tar.gz "https://raphaelmerx:$BINTRAY_KEY@api.bintray.com/content/raphaelmerx/homebrew-catalpa/postgresql/9.5.12/postgresql-9.5.12.sierra.bottle.tar.gz?publish=1&override=1"
+  - ls -l ./postgresql-9.5.12.high_sierra.bottle.1.tar.gz
+  - mv postgresql-9.5.12.high_sierra.bottle.1.tar.gz postgresql-9.5.12.high_sierra.bottle.tar.gz
+  - curl -T postgresql-9.5.12.high_sierra.bottle.tar.gz "https://raphaelmerx:$BINTRAY_KEY@api.bintray.com/content/raphaelmerx/homebrew-catalpa/postgresql/9.5.12/postgresql-9.5.12.high_sierra.bottle.tar.gz?publish=1&override=1"
