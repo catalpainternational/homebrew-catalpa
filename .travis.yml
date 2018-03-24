@@ -5,8 +5,4 @@ script:
   - brew uninstall postgresql
   - brew tap catalpainternational/catalpa
   - brew tap-pin catalpainternational/catalpa
-  - brew install postgresql --build-bottle
-  - brew bottle postgresql
-  - ls -l ./postgresql-9.5.12.sierra.bottle.1.tar.gz
-  - mv postgresql-9.5.12.sierra.bottle.1.tar.gz postgresql-9.5.12.sierra.bottle.tar.gz
-  - curl -T postgresql-9.5.12.sierra.bottle.tar.gz "https://raphaelmerx:$BINTRAY_KEY@api.bintray.com/content/raphaelmerx/homebrew-catalpa/postgresql/9.5.12/postgresql-9.5.12.sierra.bottle.tar.gz?publish=1&override=1"
+  - brew install postgresql postgis couchdb android-sdk

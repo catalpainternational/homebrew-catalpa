@@ -6,9 +6,8 @@ class Postgresql < Formula
 
   bottle do
     root_url "https://dl.bintray.com/raphaelmerx/homebrew-catalpa"
-    sha256 "1ed23f0045effafaf07e70fd2b6be4e208442b3e7d5e1ccd41c5fe646a7ca015" => :high_sierra
-    sha256 "ad1e29a3e881ee32d80f97160dbf02f7d622bd810fc0884042fdd90eff5d58a7" => :sierra
-    sha256 "bf4406afae1d3ab106f16290122fce0c32ed237da44bf07da60b482b7840027d" => :el_capitan
+    sha256 "80266941f92f0db17ed67a124ff55010ed5adac8470355c44a079d2c0fbf7d9f" => :high_sierra
+    sha256 "88616e7bfe682eb49605f6f936c60b44338a600bdbbcd144ba58cdd2a950538b" => :sierra
   end
 
   keg_only :versioned_formula
