@@ -41,7 +41,7 @@ class AndroidSdk < Formula
     %w[android ddms draw9patch emulator
        emulator-arm emulator-x86 hierarchyviewer lint mksdcard
        monitor monkeyrunner traceview].each do |tool|
-      (bin/tool).write <<-EOS.undent
+      (bin/tool).write <<~EOS
         #!/bin/bash
         TOOL="#{prefix}/tools/#{tool}"
         exec "$TOOL" "$@"
@@ -49,7 +49,7 @@ class AndroidSdk < Formula
     end
 
     %w[zipalign].each do |tool|
-      (bin/tool).write <<-EOS.undent
+      (bin/tool).write <<~EOS
         #!/bin/bash
         TOOL="#{prefix}/build-tools/#{build_tools_version}/#{tool}"
         exec "$TOOL" "$@"
@@ -57,7 +57,7 @@ class AndroidSdk < Formula
     end
 
     %w[dmtracedump etc1tool hprof-conv].each do |tool|
-      (bin/tool).write <<-EOS.undent
+      (bin/tool).write <<~EOS
         #!/bin/bash
         TOOL="#{prefix}/platform-tools/#{tool}"
         exec "$TOOL" "$@"
@@ -73,7 +73,7 @@ class AndroidSdk < Formula
     end
 
     %w[adb fastboot].each do |platform_tool|
-      (bin/platform_tool).write <<-EOS.undent
+      (bin/platform_tool).write <<~EOS
         #!/bin/bash
         PLATFORM_TOOL="#{prefix}/platform-tools/#{platform_tool}"
         test -x "$PLATFORM_TOOL" && exec "$PLATFORM_TOOL" "$@"
@@ -84,7 +84,7 @@ class AndroidSdk < Formula
     end
 
     %w[aapt aidl dexdump dx llvm-rs-cc].each do |build_tool|
-      (bin/build_tool).write <<-EOS.undent
+      (bin/build_tool).write <<~EOS
         #!/bin/bash
         BUILD_TOOLS_VERSION='#{build_tools_version}'
         BUILD_TOOL="#{prefix}/build-tools/$BUILD_TOOLS_VERSION/#{build_tool}"
@@ -107,7 +107,7 @@ class AndroidSdk < Formula
     system "echo y | bash #{bin}/android --verbose update sdk --no-ui --all --filter platform-tools,build-tools-#{build_tools_version}"
   end
 
-  def caveats; <<-EOS.undent
+  def caveats; <<~EOS
     Now run the 'android' tool to install the actual SDK stuff.
 
     The Android-SDK is available at #{opt_prefix}
