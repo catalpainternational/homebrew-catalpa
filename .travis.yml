@@ -3,6 +3,7 @@ osx_image: xcode9.1
 script:
   - brew uninstall postgis
   - brew uninstall postgresql
+  - brew unlink python
   - brew tap catalpainternational/catalpa
   - brew tap-pin catalpainternational/catalpa
   - brew install postgresql postgis couchdb android-sdk
