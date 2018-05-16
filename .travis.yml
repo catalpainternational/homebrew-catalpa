@@ -7,3 +7,5 @@ script:
   - brew tap catalpainternational/catalpa
   - brew tap-pin catalpainternational/catalpa
   - brew install postgresql postgis couchdb android-sdk
+  - brew link --force postgresql
+  - ls /usr/local/Cellar/postgresql/9.5.12/share/postgresql/extension/postgis.control
