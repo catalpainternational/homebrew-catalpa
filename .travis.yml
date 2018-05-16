@@ -8,11 +8,5 @@ script:
   - brew tap-pin catalpainternational/catalpa
   - brew install postgresql couchdb android-sdk
   - brew link --force postgresql
-  - brew install --only-dependencies postgis
-  - wget https://download.osgeo.org/postgis/source/postgis-2.2.7.tar.gz
-  - tar xvfz postgis-2.2.7.tar.gz
-  - cd postgis-2.2.7
-  - ./configure
-  - make
-  - make install
+  - brew install postgis
   - ls /usr/local/Cellar/postgresql/9.5.12/share/postgresql/extension/postgis.control

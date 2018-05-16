@@ -35,7 +35,7 @@ class Postgis < Formula
   depends_on "gtk+" if build.with? "gui"
 
   # For GeoJSON and raster handling
-  depends_on "json-c"
+  depends_on "catalpainternational/catalpa/json-c"
   depends_on "gdal" => :recommended
   depends_on "pcre" if build.with? "gdal"
 
@@ -57,7 +57,7 @@ class Postgis < Formula
 
     args = [
       "--with-projdir=#{Formula["proj"].opt_prefix}",
-      "--with-jsondir=#{Formula["json-c"].opt_prefix}",
+      "--with-jsondir=#{Formula["catalpainternational/catalpa/json-c"].opt_prefix}",
       "--with-pgconfig=#{Formula["postgresql"].opt_bin}/pg_config",
       # Unfortunately, NLS support causes all kinds of headaches because
       # PostGIS gets all of its compiler flags from the PGXS makefiles. This
