@@ -6,6 +6,9 @@ script:
   - brew unlink python
   - brew tap catalpainternational/catalpa
   - brew tap-pin catalpainternational/catalpa
+  - brew uninstall --ignore-dependencies json-c
+  - brew install catalpainternational/catalpa/json-c
+  - brew reinstall gdal --build-from-source
   - brew install postgresql couchdb android-sdk
   - brew link --force postgresql
   - brew install postgis
