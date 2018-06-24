@@ -1,5 +1,11 @@
 [![Build Status](https://travis-ci.org/raphaelmerx/hamutuk_setup_testing.svg?branch=master)](https://travis-ci.org/raphaelmerx/hamutuk_setup_testing)
 
+# DEPRECATED
+
+This project has been deprecated as it's become too much of a pain to hand-manage the dependency tree for formulas. We recommend using a Linux VM instead.
+
+If you insist on using MacOS for development, we recommend to install Postgres 9.5 using Postgres.app.
+
 # homebrew-catalpa
 
 Brew tap repository used at Catalpa. See https://docs.brew.sh/Taps.html
