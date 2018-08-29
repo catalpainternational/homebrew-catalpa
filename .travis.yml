@@ -4,4 +4,4 @@ script:
   - brew unlink python
   - brew tap catalpainternational/catalpa
   - brew tap-pin catalpainternational/catalpa
-  - brew install couchdb android-sdk
+  - brew install android-sdk
