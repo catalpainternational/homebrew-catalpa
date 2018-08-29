@@ -37,7 +37,7 @@ class Couchdb < Formula
 
   depends_on "spidermonkey"
   depends_on "icu4c"
-  depends_on "erlang"
+  depends_on "erlang@18"
   depends_on "curl" if MacOS.version <= :leopard
 
   resource "geocouch" do
@@ -64,7 +64,7 @@ class Couchdb < Formula
                           "--localstatedir=#{var}",
                           "--sysconfdir=#{etc}",
                           "--disable-init",
-                          "--with-erlang=#{HOMEBREW_PREFIX}/lib/erlang/usr/include",
+                          "--with-erlang=#{HOMEBREW_PREFIX}/lib/erlang@18/usr/include",
                           "--with-js-include=#{HOMEBREW_PREFIX}/include/js",
                           "--with-js-lib=#{HOMEBREW_PREFIX}/lib"
     system "make"
