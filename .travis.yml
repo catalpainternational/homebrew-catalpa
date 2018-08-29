@@ -1,15 +1,7 @@
 os: osx
 osx_image: xcode9.3
 script:
-  - brew uninstall postgis
-  - brew uninstall postgresql
   - brew unlink python
   - brew tap catalpainternational/catalpa
   - brew tap-pin catalpainternational/catalpa
-  - brew uninstall --ignore-dependencies json-c
-  - brew install catalpainternational/catalpa/json-c
-  - brew reinstall gdal --build-from-source
-  - brew install postgresql couchdb android-sdk
-  - brew link --force postgresql
-  - brew install postgis
-  - ls /usr/local/Cellar/postgresql/9.5.12/share/postgresql/extension/postgis.control
+  - brew install couchdb android-sdk
